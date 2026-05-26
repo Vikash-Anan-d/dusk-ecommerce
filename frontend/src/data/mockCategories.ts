@@ -1,0 +1,103 @@
+import { Category, Collection } from "@/types";
+
+export const mockCategories: Category[] = [
+  {
+    id: "1",
+    name: "Clothing",
+    slug: "clothing",
+    description: "Tees, hoodies, pants, and more",
+    productCount: 48,
+    gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+  },
+  {
+    id: "2",
+    name: "Footwear",
+    slug: "footwear",
+    description: "Sneakers, boots, and slides",
+    productCount: 24,
+    gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+  },
+  {
+    id: "3",
+    name: "Accessories",
+    slug: "accessories",
+    description: "Bags, chains, caps, and eyewear",
+    productCount: 36,
+    gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+  },
+  {
+    id: "4",
+    name: "Outerwear",
+    slug: "outerwear",
+    description: "Jackets, bombers, and coats",
+    productCount: 18,
+    gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+  },
+  {
+    id: "5",
+    name: "Lifestyle",
+    slug: "lifestyle",
+    description: "Fragrances, candles, and home",
+    productCount: 12,
+    gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+  },
+  {
+    id: "6",
+    name: "New Arrivals",
+    slug: "new-arrivals",
+    description: "Fresh drops, just landed",
+    productCount: 20,
+    gradient: "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
+  },
+];
+
+export const mockCollections: Collection[] = [
+  {
+    id: "1",
+    name: "After Dark Essentials",
+    slug: "after-dark-essentials",
+    description: "The pieces you need when the sun goes down. Curated for nightlife, events, and late-night adventures.",
+    gradient: "linear-gradient(135deg, #0c0c1d 0%, #1a0a2e 50%, #2d1b4e 100%)",
+    productIds: ["1", "4", "5", "7", "10"],
+  },
+  {
+    id: "2",
+    name: "Streetwear Edit",
+    slug: "streetwear-edit",
+    description: "Bold graphic tees, oversized fits, and statement sneakers. Street culture meets premium quality.",
+    gradient: "linear-gradient(135deg, #1a1a2e 0%, #e94560 100%)",
+    productIds: ["2", "3", "6", "9"],
+  },
+  {
+    id: "3",
+    name: "Monochrome Series",
+    slug: "monochrome-series",
+    description: "The power of black and white. Minimal palettes, maximum impact.",
+    gradient: "linear-gradient(135deg, #000000 0%, #434343 100%)",
+    productIds: ["1", "3", "4", "8"],
+  },
+  {
+    id: "4",
+    name: "Summer 2026",
+    slug: "summer-2026",
+    description: "Lightweight fabrics, breathable fits, and sun-ready accessories for the season.",
+    gradient: "linear-gradient(135deg, #f5af19 0%, #f12711 100%)",
+    productIds: ["2", "6", "8", "11"],
+  },
+  {
+    id: "5",
+    name: "Luxury Gifting",
+    slug: "luxury-gifting",
+    description: "Premium picks for the perfect gift. From fragrances to leather goods.",
+    gradient: "linear-gradient(135deg, #d4a843 0%, #2c1810 100%)",
+    productIds: ["5", "10", "11", "12"],
+  },
+  {
+    id: "6",
+    name: "Athleisure Lab",
+    slug: "athleisure-lab",
+    description: "Where performance meets style. Tech fabrics and engineered fits for the modern mover.",
+    gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+    productIds: ["3", "4", "7", "9"],
+  },
+];

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { SlidersHorizontal, X, ChevronDown, Package } from "lucide-react";
 import Breadcrumb from "@/components/ui/Breadcrumb";
@@ -25,7 +25,7 @@ const SORT_OPTIONS: { value: SortOption; label: string }[] = [
   { value: "rating", label: "Rating" },
 ];
 
-export default function ShopPage() {
+function ShopContent() {
   const searchParams = useSearchParams();
   const preCategory = searchParams.get("category") ?? "";
 
@@ -334,5 +334,13 @@ export default function ShopPage() {
         {FilterSidebar}
       </div>
     </main>
+  );
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-muted">Loading shop...</div>}>
+      <ShopContent />
+    </Suspense>
   );
 }
